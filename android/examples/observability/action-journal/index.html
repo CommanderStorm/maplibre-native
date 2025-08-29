@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://www.maplibre.org/maplibre-native/android/examples/styling/custom-sprite/">
+        <link rel="canonical" href="https://www.maplibre.org/maplibre-native/android/examples/observability/action-journal/">
       
       
-        <link rel="prev" href="../circle-layer/">
+        <link rel="prev" href="../../data/PMTiles/">
       
       
-        <link rel="next" href="../data-driven-style/">
+        <link rel="next" href="../observe-map-events/">
       
       
       <link rel="icon" href="https://maplibre.org/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Add Custom Sprite - MapLibre Android Examples</title>
+        <title>Action Journal - MapLibre Android Examples</title>
       
     
     
@@ -61,11 +61,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Add Custom Sprite - MapLibre Android Examples" >
+        <meta  property="og:title"  content="Action Journal - MapLibre Android Examples" >
       
         <meta  property="og:description"  content="MapLibre Android Examples" >
       
-        <meta  property="og:image"  content="https://www.maplibre.org/maplibre-native/android/examples/assets/images/social/styling/custom-sprite.png" >
+        <meta  property="og:image"  content="https://www.maplibre.org/maplibre-native/android/examples/assets/images/social/observability/action-journal.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -73,15 +73,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://www.maplibre.org/maplibre-native/android/examples/styling/custom-sprite/" >
+        <meta  property="og:url"  content="https://www.maplibre.org/maplibre-native/android/examples/observability/action-journal/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Add Custom Sprite - MapLibre Android Examples" >
+        <meta  name="twitter:title"  content="Action Journal - MapLibre Android Examples" >
       
         <meta  name="twitter:description"  content="MapLibre Android Examples" >
       
-        <meta  name="twitter:image"  content="https://www.maplibre.org/maplibre-native/android/examples/assets/images/social/styling/custom-sprite.png" >
+        <meta  name="twitter:image"  content="https://www.maplibre.org/maplibre-native/android/examples/assets/images/social/observability/action-journal.png" >
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-custom-sprite" class="md-skip">
+        <a href="#action-journal" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add Custom Sprite
+              Action Journal
             
           </span>
         </div>
@@ -853,8 +853,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -865,11 +867,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
@@ -885,7 +887,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Observability
@@ -896,10 +898,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../observability/action-journal/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Action Journal
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -910,6 +934,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-the-action-journal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling the Action Journal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-implementation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging implementation details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -922,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../observability/observe-map-events/" class="md-nav__link">
+      <a href="../observe-map-events/" class="md-nav__link">
         
   
   
@@ -949,8 +1038,6 @@
       
   
   
-    
-  
   
   
     
@@ -963,11 +1050,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
@@ -983,7 +1070,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Styling
@@ -997,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../animated-image-source/" class="md-nav__link">
+      <a href="../../styling/animated-image-source/" class="md-nav__link">
         
   
   
@@ -1020,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../animated-symbol-layer/" class="md-nav__link">
+      <a href="../../styling/animated-symbol-layer/" class="md-nav__link">
         
   
   
@@ -1043,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../building-layer/" class="md-nav__link">
+      <a href="../../styling/building-layer/" class="md-nav__link">
         
   
   
@@ -1066,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../circle-layer/" class="md-nav__link">
+      <a href="../../styling/circle-layer/" class="md-nav__link">
         
   
   
@@ -1086,19 +1173,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../styling/custom-sprite/" class="md-nav__link">
         
   
   
@@ -1109,7 +1187,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1122,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-driven-style/" class="md-nav__link">
+      <a href="../../styling/data-driven-style/" class="md-nav__link">
         
   
   
@@ -1145,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../distance-expression/" class="md-nav__link">
+      <a href="../../styling/distance-expression/" class="md-nav__link">
         
   
   
@@ -1168,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../draggable-marker/" class="md-nav__link">
+      <a href="../../styling/draggable-marker/" class="md-nav__link">
         
   
   
@@ -1191,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../live-realtime-data/" class="md-nav__link">
+      <a href="../../styling/live-realtime-data/" class="md-nav__link">
         
   
   
@@ -1230,7 +1307,7 @@
 
 
   
-    <a href="https://github.com/maplibre/maplibre-native/edit/main/platform/android/docs/styling/custom-sprite.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/maplibre/maplibre-native/edit/main/platform/android/docs/observability/action-journal.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1238,41 +1315,128 @@
   
 
 
-<h1 id="add-custom-sprite">Add Custom Sprite</h1>
+<h1 id="action-journal">Action Journal</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can find the full source code of this example in <a href="https://github.com/maplibre/maplibre-native/blob/main/platform/android/MapLibreAndroidTestApp/src/main/java/org/maplibre/android/testapp/activity/style/CustomSpriteActivity.kt"><code>CustomSpriteActivity.kt</code></a> of the MapLibreAndroidTestApp.</p>
+<p>You can find the full source code of this example in <a href="https://github.com/maplibre/maplibre-native/blob/main/platform/android/MapLibreAndroidTestApp/src/main/java/org/maplibre/android/testapp/activity/events/ObserverActivity.kt"><code>ObserverActivity.kt</code></a> of the MapLibreAndroidTestApp.</p>
 </div>
-<p>This example showcases adding a sprite image and using it in a Symbol Layer.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Add an icon to reference later</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">style</span><span class="p">.</span><span class="na">addImage</span><span class="p">(</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">CUSTOM_ICON</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">BitmapFactory</span><span class="p">.</span><span class="na">decodeResource</span><span class="p">(</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">resources</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">ic_car_top</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// Add a source with a geojson point</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point</span><span class="p">.</span><span class="na">fromLngLat</span><span class="p">(</span><span class="m">13.400972</span><span class="p">,</span><span class="w"> </span><span class="m">52.519003</span><span class="p">)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GeoJsonSource</span><span class="p">(</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="s">&quot;point&quot;</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">FeatureCollection</span><span class="p">.</span><span class="na">fromFeatures</span><span class="p">(</span><span class="n">arrayOf</span><span class="p">(</span><span class="n">Feature</span><span class="p">.</span><span class="na">fromGeometry</span><span class="p">(</span><span class="n">point</span><span class="p">)))</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">maplibreMap</span><span class="p">.</span><span class="na">style</span><span class="o">!!</span><span class="p">.</span><span class="na">addSource</span><span class="p">(</span><span class="n">source</span><span class="o">!!</span><span class="p">)</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1">// Add a symbol layer that references that point source</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SymbolLayer</span><span class="p">(</span><span class="s">&quot;layer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;point&quot;</span><span class="p">)</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">layer</span><span class="p">.</span><span class="na">setProperties</span><span class="p">(</span><span class="w"> </span><span class="c1">// Set the id of the sprite to use</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="n">PropertyFactory</span><span class="p">.</span><span class="na">iconImage</span><span class="p">(</span><span class="n">CUSTOM_ICON</span><span class="p">),</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="n">PropertyFactory</span><span class="p">.</span><span class="na">iconAllowOverlap</span><span class="p">(</span><span class="kc">true</span><span class="p">),</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">PropertyFactory</span><span class="p">.</span><span class="na">iconIgnorePlacement</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">)</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1">// lets add a circle below labels!</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">maplibreMap</span><span class="p">.</span><span class="na">style</span><span class="o">!!</span><span class="p">.</span><span class="na">addLayerBelow</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;water-intermittent&quot;</span><span class="p">)</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">fab</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">ic_directions_car_black</span><span class="p">)</span>
+<p>The Action Journal provides functionality for persistent logging of top level map events.</p>
+<!-- NOTE: keep this text in sync with platform/ios/MapLibre.docc/ActionJournalExample.md -->
+
+<p>Its primary use case is to assist in debugging problematic sessions and crashes by offering additional insight into the actions performed by the map at the time of failure. Data is stored in human readable format, which is useful for analyzing individual cases, but can also be easily translated and aggregated into a database, allowing for efficient analysis of multiple cases and helping to identify recurring patterns (Google BigQuery, AWS Glue + S3 + Athena, etc).</p>
+<p>We are always interested in improving observability, so if you have a special use case, feel free to <a href="https://github.com/maplibre/maplibre-native">open an issue or pull request</a> to extend the types of observability methods.</p>
+<h2 id="enabling-the-action-journal">Enabling the Action Journal</h2>
+<p>You can enable the action journal either through XML:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;org.maplibre.android.maps.MapView</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">android:id=</span><span class="s">&quot;@id/mapView&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="na">app:maplibre_actionJournalEnabled=</span><span class="s">&quot;true&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="na">app:maplibre_actionJournalLogFileSize=</span><span class="s">&quot;1024&quot;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="na">app:maplibre_actionJournalLogFileCount=</span><span class="s">&quot;2&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="na">app:maplibre_actionJournalRenderingReportInterval=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
+<p>Or by passing the corresponding options with <code>MapLibreMapOptions</code> to <code>MapView</code>. For more information see <a href="../../configuration/">Configuration</a>.</p>
+<h2 id="logging-implementation-details">Logging implementation details</h2>
+<p>The logging is implemented using rolling files with a size based policy:</p>
+<ul>
+<li>A new file is created when the current log size exceeds <code>MapLibreMapOptions.actionJournalLogFileSize</code>.</li>
+<li>When the maximum number of files exceeds <code>MapLibreMapOptions.actionJournalLogFileCount</code>:<ul>
+<li>The oldest one is deleted.</li>
+<li>The remaining files are renamed sequentially to maintain the naming convention <code>action_journal.0.log</code> through <code>action_journal.{logFileCount - 1}.log</code>.</li>
+</ul>
+</li>
+<li>Each file contains one event per line.</li>
+<li>All files are stored in an umbrella <code>action_journal</code> directory at <code>MapLibreMapOptions.actionJournalPath</code>.</li>
+</ul>
+<p>See also: <code>MapLibreMap</code>, <code>MapLibreMapOptions</code>.</p>
+<h2 id="event-format">Event format</h2>
+<p>Events are stored as JSON objects with the following format:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">true</td>
+<td style="text-align: left;">event name</td>
+</tr>
+<tr>
+<td style="text-align: left;">time</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">true</td>
+<td style="text-align: left;">event time (<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> with milliseconds)</td>
+</tr>
+<tr>
+<td style="text-align: left;">styleName</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">currently loaded style name</td>
+</tr>
+<tr>
+<td style="text-align: left;">styleURL</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">currently loaded style URL</td>
+</tr>
+<tr>
+<td style="text-align: left;">clientName</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">clientVersion</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">event</td>
+<td style="text-align: center;">object</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">event specific data - consists of encoded values of the parameters passed to their <code>MLNMapViewDelegate</code> counterparts</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &quot;name&quot; : &quot;onTileAction&quot;,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    &quot;time&quot; : &quot;2025-04-17T13:13:13.974Z&quot;,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    &quot;styleName&quot; : &quot;Streets&quot;,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &quot;styleURL&quot; : &quot;maptiler://maps/streets&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;clientName&quot; : &quot;App&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;clientVersion&quot; : &quot;1.0&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;event&quot; : {
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        &quot;action&quot; : &quot;RequestedFromNetwork&quot;,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        &quot;tileX&quot; : 0,
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        &quot;tileY&quot; : 0,
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        &quot;tileZ&quot; : 0,
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        &quot;overscaledZ&quot; : 0,
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        &quot;sourceID&quot; : &quot;openmaptiles&quot;
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    }
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>}
+</span></code></pre></div>
+<h2 id="usage">Usage</h2>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">printActionJournal</span><span class="p">(</span><span class="n">map</span><span class="p">:</span><span class="w"> </span><span class="n">MapLibreMap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="c1">// configure using `MapLibreMapOptions.actionJournal*` methods</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">Logger</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="s">&quot;ActionJournal files: \n</span><span class="si">${</span><span class="n">map</span><span class="p">.</span><span class="na">actionJournalLogFiles</span><span class="p">.</span><span class="na">joinToString</span><span class="p">(</span><span class="s">&quot;</span><span class="err">\</span><span class="n">n</span><span class="s">&quot;</span><span class="p">)</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Logger</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="s">&quot;ActionJournal : \n</span><span class="si">${</span><span class="n">map</span><span class="p">.</span><span class="na">actionJournalLog</span><span class="p">.</span><span class="na">joinToString</span><span class="p">(</span><span class="s">&quot;</span><span class="err">\</span><span class="n">n</span><span class="s">&quot;</span><span class="p">)</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="c1">// print only the newest events on each call</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">map</span><span class="p">.</span><span class="na">clearActionJournalLog</span><span class="p">()</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="alternative">Alternative</h2>
+<p>The implementation is kept close to the core events to minimize additional locking and avoid platform-specific conversions and calls. As a result customization options and extensibility is limited.</p>
+<p>For greater flexibility, consider using the <code>MapView</code> event interface (see also <code>MapChangeReceiver</code>). It provides hooks for most Action Journal events and allows for more customizable querying and storage of map data. However, this comes at the cost of added complexity. See <a href="../observe-map-events/">Observe Map Events</a> to learn about the map events that you can listen for, which mirror the events available in the action journal.</p>
 
 
 
