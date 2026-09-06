@@ -20,7 +20,7 @@ RasterTile::RasterTile(const OverscaledTileID& id_,
                        const Tileset& tileset,
                        TileObserver* observer_)
     : Tile(Kind::Raster, id_, std::move(sourceID_), observer_),
-      loader(*this, id_, parameters, tileset),
+      loader(*this, id_, parameters, tileset, util::MIME_TYPE_RASTER),
       threadPool(parameters.threadPool),
       mailbox(std::make_shared<Mailbox>(*Scheduler::GetCurrent())),
       worker(parameters.threadPool, ActorRef<RasterTile>(*this, mailbox)) {}
