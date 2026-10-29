@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="235" viewBox="0 0 560 235" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <pattern id="sliver" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="2" height="4" fill="#dc2626"/>
+    </pattern>
+    <g id="grid" fill="#f3f4f6" stroke="#9ca3af">
+      <rect x="0" y="0" width="50" height="50"/>
+      <rect x="50" y="0" width="50" height="50"/>
+      <rect x="100" y="0" width="50" height="50"/>
+      <rect x="0" y="50" width="50" height="50"/>
+      <rect x="50" y="50" width="50" height="50"/>
+      <rect x="100" y="50" width="50" height="50"/>
+      <rect x="0" y="100" width="50" height="50"/>
+      <rect x="50" y="100" width="50" height="50"/>
+      <rect x="100" y="100" width="50" height="50"/>
+    </g>
+  </defs>
+  <rect width="560" height="235" fill="#ffffff"/>
+
+  <g transform="translate(20,0)">
+    <text x="75" y="24" text-anchor="middle" font-weight="bold" fill="#111827">camera</text>
+    <g transform="translate(0,40)">
+      <use href="#grid"/>
+      <rect x="50" y="50" width="50" height="50" fill="#fde68a" stroke="#111827" stroke-width="3"/>
+    </g>
+    <text x="75" y="215" text-anchor="middle" fill="#374151">exactly one tile</text>
+  </g>
+
+  <g transform="translate(205,0)">
+    <text x="75" y="24" text-anchor="middle" font-weight="bold" fill="#111827">frustum test, z16+</text>
+    <g transform="translate(0,40)">
+      <use href="#grid"/>
+      <rect x="50" y="50" width="50" height="50" fill="#fde68a" stroke="#9ca3af"/>
+      <rect x="100" y="50" width="6" height="50" fill="url(#sliver)"/>
+      <rect x="50" y="50" width="56" height="50" fill="none" stroke="#111827" stroke-width="3"/>
+    </g>
+    <text x="75" y="215" text-anchor="middle" fill="#dc2626">warns, renders fine</text>
+  </g>
+
+  <g transform="translate(390,0)">
+    <text x="75" y="24" text-anchor="middle" font-weight="bold" fill="#111827">real misuse</text>
+    <g transform="translate(0,40)">
+      <use href="#grid"/>
+      <rect x="25" y="25" width="50" height="50" fill="none" stroke="#111827" stroke-width="3"/>
+    </g>
+    <text x="75" y="215" text-anchor="middle" fill="#374151">warns, must stay</text>
+  </g>
+</svg>
